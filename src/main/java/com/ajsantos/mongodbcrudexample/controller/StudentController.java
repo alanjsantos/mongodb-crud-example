@@ -37,7 +37,7 @@ public class StudentController {
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<Student> save (@RequestBody Student student, @PathVariable String id) {
+    public ResponseEntity<Student> update (@RequestBody Student student, @PathVariable String id) {
         student.setId(id);
         student = service.save(student);
 
